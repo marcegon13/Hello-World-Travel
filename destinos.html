@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinos - Hello World Travel</title>
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NAVBAR ACTUALIZADO -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo1.png" alt="Hello World Travel" class="navbar-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="destinos.html">Destinos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="promociones.html">Promociones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO SECTION DESTINOS -->
+  <section class="destinos-hero">
+    <div class="container">
+      <div class="hero-content text-center text-white">
+        <h1 class="display-4 fw-bold mb-4">Descubre el Mundo</h1>
+        <p class="lead mb-5">Explora nuestros destinos más increíbles y planifica tu próxima aventura</p>
+        <div class="search-box">
+          <input type="text" class="form-control" placeholder="Buscar destino...">
+          <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTROS POR REGIÓN -->
+  <section class="filters-section py-4 bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-auto">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="argentina">Argentina</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="sudamerica">Sudamérica</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="eeuu">Estados Unidos</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="europa">Europa</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="caribe">Caribe</button>
+        </div>
+        <div class="col-auto">
+          <button class="filter-btn" data-filter="africa">África</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA DE DESTINOS -->
+  <section class="destinos-gallery py-5">
+    <div class="container">
+      <div class="row g-4" id="destinosGrid">
+
+        <!-- ARGENTINA -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="argentina">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/argentina/cataratas.jpg" alt="Cataratas del Iguazú">
+              <div class="destino-overlay">
+                <span class="destino-badge">Argentina</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Cataratas del Iguazú</h3>
+              <p>Una de las 7 maravillas naturales del mundo</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Misiones</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="argentina">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/argentina/norte_argentino.jpg" alt="Norte Argentino">
+              <div class="destino-overlay">
+                <span class="destino-badge">Argentina</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Norte Argentino</h3>
+              <p>Paisajes únicos y cultura andina</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Salta & Jujuy</span>
+                <span><i class="fas fa-clock"></i> Marzo - Nov</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="argentina">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/argentina/siete_lagos.png" alt="Siete Lagos">
+              <div class="destino-overlay">
+                <span class="destino-badge">Argentina</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Siete Lagos</h3>
+              <p>Ruta escénica patagónica</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Neuquén</span>
+                <span><i class="fas fa-clock"></i> Oct - Abr</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUDAMÉRICA -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="sudamerica">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/sudamerica/rio.jpg" alt="Río de Janeiro">
+              <div class="destino-overlay">
+                <span class="destino-badge">Brasil</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Río de Janeiro</h3>
+              <p>Carnaval, playas y el Cristo Redentor</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Brasil</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="sudamerica">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/sudamerica/santiago-chile.jpg" alt="Santiago de Chile">
+              <div class="destino-overlay">
+                <span class="destino-badge">Chile</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Santiago de Chile</h3>
+              <p>Modernidad entre montañas</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Chile</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ESTADOS UNIDOS -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="eeuu">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/eeuu/Disney.jpg" alt="Orlando">
+              <div class="destino-overlay">
+                <span class="destino-badge">USA</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Orlando</h3>
+              <p>Parques temáticos y diversión familiar</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Florida</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="eeuu">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/eeuu/Miami.jpg" alt="Miami">
+              <div class="destino-overlay">
+                <span class="destino-badge">USA</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Miami</h3>
+              <p>Playas, compras y vida nocturna</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Florida</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="eeuu">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/eeuu/New york.jpg" alt="Nueva York">
+              <div class="destino-overlay">
+                <span class="destino-badge">USA</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Nueva York</h3>
+              <p>La ciudad que nunca duerme</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Nueva York</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- EUROPA -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/alpes_suizos.jpg" alt="Alpes Suizos">
+              <div class="destino-overlay">
+                <span class="destino-badge">Suiza</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Alpes Suizos</h3>
+              <p>Montañas espectaculares y lagos cristalinos</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Suiza</span>
+                <span><i class="fas fa-clock"></i> Jun - Sep</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <!-- EUROPA - DESTINOS ADICIONALES -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/Paris.jpg" alt="París">
+              <div class="destino-overlay">
+                <span class="destino-badge">Francia</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>París</h3>
+              <p>La ciudad del amor y la Torre Eiffel</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Francia</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/Barcelona.jpg" alt="Barcelona">
+              <div class="destino-overlay">
+                <span class="destino-badge">España</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Barcelona</h3>
+              <p>Arquitectura Gaudí y playas mediterráneas</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> España</span>
+                <span><i class="fas fa-clock"></i> Mar - Oct</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/berlin 1.jpg" alt="Berlín">
+              <div class="destino-overlay">
+                <span class="destino-badge">Alemania</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Berlín</h3>
+              <p>Historia, cultura y vida nocturna</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Alemania</span>
+                <span><i class="fas fa-clock"></i> May - Sep</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/Berlin_nocturno.jpg" alt="Berlín Nocturna">
+              <div class="destino-overlay">
+                <span class="destino-badge">Alemania</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Berlín Nocturna</h3>
+              <p>Arquitectura iluminada y entretenimiento</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Alemania</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/Atenas.jpg" alt="Atenas">
+              <div class="destino-overlay">
+                <span class="destino-badge">Grecia</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Atenas</h3>
+              <p>Cuna de la civilización occidental</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Grecia</span>
+                <span><i class="fas fa-clock"></i> Abr - Oct</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 destino-item" data-category="europa">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/europa/Amalfi.jpg" alt="Costa Amalfitana">
+              <div class="destino-overlay">
+                <span class="destino-badge">Italia</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Costa Amalfitana</h3>
+              <p>Paisajes costeros espectaculares de Italia</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Italia</span>
+                <span><i class="fas fa-clock"></i> May - Sep</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARIBE -->
+        <div class="col-lg-4 col-md-6 destino-item" data-category="caribe">
+          <div class="destino-card">
+            <div class="destino-image">
+              <img src="img/caribe/Cancun.jpg" alt="Cancún">
+              <div class="destino-overlay">
+                <span class="destino-badge">México</span>
+              </div>
+            </div>
+            <div class="destino-content">
+              <h3>Cancún</h3>
+              <p>Playas de arena blanca y aguas turquesas</p>
+              <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> México</span>
+                <span><i class="fas fa-clock"></i> Todo el año</span>
+              </div>
+              <a href="contacto.html" class="btn btn-primary">Consultar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ÁFRICA -->
+       
+
+<!-- ÁFRICA - KILIMANJARO -->
+<div class="col-lg-4 col-md-6 destino-item" data-category="africa">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/africa/africa-kilimanjaro-elefante.jpg" alt="Kilimanjaro">
+            <div class="destino-overlay">
+                <span class="destino-badge">Tanzania</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Kilimanjaro</h3>
+            <p>El techo de África y safaris increíbles</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Tanzania</span>
+                <span><i class="fas fa-clock"></i> Jun - Oct</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+<!-- ÁFRICA - EGIPTO -->
+<div class="col-lg-4 col-md-6 destino-item" data-category="africa">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/africa/egipto.jpg" alt="Egipto">
+            <div class="destino-overlay">
+                <span class="destino-badge">Egipto</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Egipto</h3>
+            <p>Pirámides, faraones y el río Nilo</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Egipto</span>
+                <span><i class="fas fa-clock"></i> Oct - Abr</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- ÁFRICA - SILHOUETTES -->
+<div class="col-lg-4 col-md-6 destino-item" data-category="africa">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/africa/silhouettes-of.jpg" alt="Safari África">
+            <div class="destino-overlay">
+                <span class="destino-badge">Kenia</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Safari Kenia</h3>
+            <p>Vida salvaje en el Masai Mara</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Kenia</span>
+                <span><i class="fas fa-clock"></i> Jul - Oct</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+  <!-- SUDESTE ASIÁTICO - CON NOMBRES REALES -->
+<div class="col-lg-4 col-md-6 destino-item" data-category="asia">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/sudeste-asiatico/tokio.jpg" alt="Tokio">
+            <div class="destino-overlay">
+                <span class="destino-badge">Japón</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Tokio</h3>
+            <p>Tecnología y tradición en armonía</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Japón</span>
+                <span><i class="fas fa-clock"></i> Mar - May / Sep - Nov</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 destino-item" data-category="asia">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/sudeste-asiatico/tailandia.jpg" alt="Tailandia">
+            <div class="destino-overlay">
+                <span class="destino-badge">Tailandia</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Tailandia</h3>
+            <p>Templos, playas y cultura exótica</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> Tailandia</span>
+                <span><i class="fas fa-clock"></i> Nov - Feb</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 destino-item" data-category="asia">
+    <div class="destino-card">
+        <div class="destino-image">
+            <img src="img/sudeste-asiatico/beijing.jpg" alt="Beijing">
+            <div class="destino-overlay">
+                <span class="destino-badge">China</span>
+            </div>
+        </div>
+        <div class="destino-content">
+            <h3>Beijing</h3>
+            <p>Gran Muralla y cultura milenaria china</p>
+            <div class="destino-features">
+                <span><i class="fas fa-map-marker-alt"></i> China</span>
+                <span><i class="fas fa-clock"></i> Abr - May / Sep - Oct</span>
+            </div>
+            <a href="contacto.html" class="btn btn-primary">Consultar</a>
+        </div>
+    </div>
+</div>
+
+  <!-- FOOTER ACTUALIZADO -->
+  <footer class="custom-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 footer-brand">
+          <img src="img/logo1.png" alt="Hello World Travel" class="footer-logo">
+          <p class="mt-3">Tu agencia de confianza para descubrir el mundo</p>
+        </div>
+        <div class="col-md-4 footer-contact">
+          <h5>Contacto</h5>
+          <p><i class="fas fa-map-marker-alt"></i> Avenida Maipú 1700, Vicente López</p>
+          <p><i class="fas fa-envelope"></i> info@helloworldtravel.com</p>
+          <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+        </div>
+        <div class="col-md-4 footer-social">
+          <h5>Seguinos</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom text-center mt-4 pt-3 border-top">
+        <div class="credits">
+          <img src="img/logo1.png" alt="La Nube" class="credits-logo">
+          <span>Design by www.lanubedesarrolloweb.com</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- JavaScript para filtros -->
+  <script src="destinos.js"></script>
+</body>
+
+</html>

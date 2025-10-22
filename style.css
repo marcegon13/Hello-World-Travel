@@ -1,0 +1,1370 @@
+/* FUENTES Y BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* NAVBAR MODERNO */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-logo {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 10px 20px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION */
+.hero-section {
+    margin-top: 76px;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 600px;
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.carousel-caption .btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* DESTINOS POPULARES */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    height: 400px;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+
+.destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    padding: 2rem;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover .destination-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* HOTELES */
+.hotel-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.hotel-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.hotel-card .card-body {
+    padding: 1.5rem;
+}
+
+.rating {
+    color: #ffc107;
+}
+
+/* FOOTER */
+.custom-footer {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-logo {
+    height: 60px;
+}
+
+.footer-contact i {
+    width: 20px;
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: #6c757d; 
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #007bff;
+    transform: translateY(-3px);
+}
+
+.credits-logo {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.credits {
+    display: inline-flex;
+    align-items: center;
+    color: #bdc3c7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .destination-card {
+        height: 300px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* DESTINOS POPULARES - ESTILOS ESPECÍFICOS */
+.popular-destinations {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+}
+
+.popular-destinations::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #007bff, transparent);
+}
+
+.destination-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: all 0.4s ease;
+    height: 350px;
+    background: #000;
+}
+
+.destination-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.destination-card:hover img {
+    transform: scale(1.15);
+    filter: brightness(0.8);
+}
+
+.destination-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.95));
+    color: white;
+    padding: 2rem 1.5rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.destination-card:hover .destination-info {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.destination-info h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.destination-info p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* BADGES MEJORADOS */
+.destination-info .badge {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bg-warning {
+    background: linear-gradient(135deg, #ffc107, #e0a800) !important;
+    color: #000 !important;
+}
+
+.bg-info {
+    background: linear-gradient(135deg, #17a2b8, #138496) !important;
+}
+
+.bg-success {
+    background: linear-gradient(135deg, #28a745, #1e7e34) !important;
+}
+
+/* BOTÓN VER TODOS LOS DESTINOS */
+.btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,123,255,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .destination-card {
+        height: 280px;
+        margin-bottom: 2rem;
+    }
+    
+    .destination-info {
+        padding: 1.5rem 1rem;
+        transform: translateY(0);
+        opacity: 1;
+        background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    }
+    
+    .destination-info h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* GARANTIZAR QUE LAS IMÁGENES CARGUEN BIEN */
+.destination-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    background: #f8f9fa; /* Color de fondo mientras carga */
+}
+
+/* ESTILOS PARA CUANDO LAS IMÁGENES NO CARGAN */
+.destination-card img:before {
+    content: "📷 Imagen no disponible";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* RESPONSIVE MEJORADO */
+@media (max-width: 768px) {
+    .destination-card {
+        height: 300px;
+    }
+    
+    .destination-info {
+        padding: 1.5rem 1rem;
+    }
+    
+    .destination-info h4 {
+        font-size: 1.3rem;
+    }
+}
+
+/* EFECTOS HOVER MÁS SUAVES */
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.destination-card:hover img {
+    transform: scale(1.1);
+}
+/* MEJORAR VISIBILIDAD DEL LOGO EXISTENTE */
+.navbar-logo {
+    height: 80px !important; /* Mantenemos el tamaño actual */
+    max-width: 300px !important;
+    filter: brightness(1.2) contrast(1.1); /* Mejorar visibilidad */
+    transition: all 0.3s ease;
+}
+
+/* MÁS ESPACIO EN EL NAVBAR PARA QUE RESPIRE */
+.custom-navbar {
+    padding: 15px 0 !important; /* Más espacio arriba y abajo */
+    min-height: 110px; /* Navbar más alto */
+    background: rgba(0, 0, 0, 0.95) !important; /* Fondo más sólido */
+}
+
+/* MÁS SEPARACIÓN ENTRE LOGO Y MENÚ */
+.navbar-brand {
+    margin-right: 2rem; /* Más espacio a la derecha del logo */
+}
+
+/* MEJORAR CONTRASTE DEL TEXTO DEL LOGO */
+.custom-navbar .navbar-brand {
+    position: relative;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 60px !important;
+        max-width: 250px !important;
+    }
+    
+    .custom-navbar {
+        padding: 10px 0 !important;
+        min-height: 90px;
+    }
+}
+/* ENFATIZAR MÁS EL LOGO */
+.navbar-logo {
+    height: 80px !important;
+    max-width: 300px !important;
+    filter: drop-shadow(0 2px 4px rgba(255,255,255,0.3)); /* Sombra blanca */
+    border: 2px solid rgba(255,255,255,0.1); /* Borde sutil */
+    border-radius: 8px; /* Esquinas redondeadas */
+    padding: 5px; /* Espacio interno */
+    background: rgba(255,255,255,0.05); /* Fondo sutil */
+}
+
+.custom-navbar {
+    padding: 12px 0 !important;
+    min-height: 105px;
+    background: linear-gradient(135deg, #000 0%, #222 100%) !important;
+}
+
+/* LOGO CON MEDIDAS EXACTAS 200x143 */
+.navbar-logo {
+    width: 200px !important;   /* Ancho exacto */
+    height: 143px !important;  /* Alto exacto */
+    object-fit: contain;       /* Mantener proporciones */
+    transition: all 0.3s ease;
+}
+
+/* NAVBAR MÁS ALTO PARA EL LOGO */
+.custom-navbar {
+    padding: 5px 0 !important;
+    min-height: 150px;         /* Navbar más alto para el logo */
+}
+
+/* CENTRAR VERTICALMENTE EL LOGO */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;                /* Quitar padding extra */
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+    .navbar-logo {
+        width: 150px !important;   /* Un poco más chico en móviles */
+        height: 107px !important;  /* Mantener proporción 200:143 */
+    }
+    
+    .custom-navbar {
+        min-height: 120px;
+        padding: 8px 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-logo {
+        width: 120px !important;
+        height: 86px !important;   /* Mantener proporción */
+    }
+    
+    .custom-navbar {
+        min-height: 100px;
+    }
+}
+
+/* LOGO DEL FOOTER CON MISMO TAMAÑO 200x143 */
+.footer-logo {
+    width: 200px !important;   /* Mismo ancho */
+    height: 143px !important;  /* Mismo alto */
+    object-fit: contain;       /* Mantener proporciones */
+}
+
+/* AJUSTAR ESPACIADO DEL FOOTER SI ES NECESARIO */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* RESPONSIVE PARA MÓVILES */
+@media (max-width: 768px) {
+    .footer-logo {
+        width: 150px !important;
+        height: 107px !important;  /* Mantener proporción */
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-logo {
+        width: 120px !important;
+        height: 86px !important;   /* Mantener proporción */
+    }
+}
+
+/* LOGO NAVBAR - logo1.png */
+.navbar-logo {
+    width: 200px !important;
+    height: 143px !important;
+    object-fit: contain;
+}
+
+/* LOGO FOOTER - logo1.png */
+.footer-logo {
+    width: 200px !important;
+    height: 143px !important;
+    object-fit: contain;
+}
+
+/* HERO DESTINOS */
+.destinos-hero {
+    background: linear-gradient(135deg, rgba(0,123,255,0.8) 0%, rgba(0,86,179,0.9) 100%), 
+                url('img/galeria_index/Paris.jpg') center/cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    padding: 2rem 0;
+}
+
+.destinos-hero .hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box .form-control {
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.search-box .btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border-radius: 50px;
+    padding: 0 25px;
+}
+
+/* FILTROS */
+.filters-section {
+    position: sticky;
+    top: 150px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* CARDS DE DESTINOS */
+.destino-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.destino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.destino-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.destino-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.destino-card:hover .destino-image img {
+    transform: scale(1.1);
+}
+
+.destino-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.destino-badge {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.destino-content {
+    padding: 1.5rem;
+}
+
+.destino-content h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.destino-content p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.destino-features {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #495057;
+}
+
+.destino-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.destino-features i {
+    color: #007bff;
+}
+
+/* ANIMACIONES PARA FILTROS */
+.destino-item {
+    animation: fadeInUp 0.6s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .destinos-hero {
+        margin-top: 120px;
+        min-height: 50vh;
+    }
+    
+    .destinos-hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .filters-section {
+        top: 120px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        margin: 2px;
+    }
+}
+/* HERO DESTINOS - SOLO GRADIENTE */
+.destinos-hero {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    padding: 2rem 0;
+}
+
+.destinos-hero .hero-content h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 1.5rem;
+}
+
+.destinos-hero .hero-content .lead {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.search-box .form-control {
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.search-box .btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    border-radius: 50px;
+    padding: 0 25px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.search-box .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+}
+
+
+/* HERO CONTACTO */
+.contacto-hero {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    padding: 2rem 0;
+}
+
+.contacto-hero .hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* SECCIÓN CONTACTO */
+.contacto-section {
+    background: #f8f9fa;
+}
+
+.contacto-info {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contacto-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.contacto-text h5 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contacto-text p {
+    color: #6c757d;
+    margin: 0;
+}
+/* CONTACTO REDES SOCIALES - SOLUCIÓN DEFINITIVA */
+.contacto-redes .social-icons {
+    display: flex !important;
+    gap: 12px !important;
+}
+
+.contacto-redes .social-link {
+    width: 45px !important;
+    height: 45px !important;
+    background: #f8f9fa !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid #dee2e6 !important;
+    font-size: 1.1rem !important;
+}
+
+/* FORZAR COLOR GRIS EN LOS ICONOS */
+.contacto-redes .social-link i.fab,
+.contacto-redes .social-link i.fas,
+.contacto-redes .social-icons .social-link i {
+    color: #6c757d !important;
+    transition: color 0.3s ease !important;
+}
+
+.contacto-redes .social-link:hover {
+    background: #007bff !important;
+    transform: translateY(-3px) !important;
+    border-color: #007bff !important;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* FORZAR COLOR BLANCO EN HOVER */
+.contacto-redes .social-link:hover i.fab,
+.contacto-redes .social-link:hover i.fas,
+.contacto-redes .social-icons .social-link:hover i {
+    color: white !important;
+}
+
+/* FORMULARIO */
+.contacto-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contacto-form .form-label {
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.contacto-form .form-control,
+.contacto-form .form-select {
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contacto-form .form-control:focus,
+.contacto-form .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,0.25);
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contacto-form .btn {
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contacto-form .btn-primary {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+}
+
+.contacto-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+/* MAPA */
+.mapa-section {
+    background: white;
+}
+
+.mapa-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contacto-hero {
+        margin-top: 120px;
+        min-height: 30vh;
+    }
+    
+    .contacto-hero .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contacto-info,
+    .contacto-form {
+        padding: 1.5rem;
+    }
+    
+    .contacto-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contacto-icon {
+        align-self: center;
+    }
+    
+    .mapa-container {
+        margin: 0 1rem;
+    }
+}
+
+/* SOLUCIÓN NUCLEAR - ELIMINAR TODOS LOS COLORES EXISTENTES */
+.contacto-redes .social-icons a *,
+.contacto-redes .social-link *,
+.contacto-redes i.fab,
+.contacto-redes i.fas,
+.contacto-redes i.far {
+    color: #6c757d !important;
+}
+
+.contacto-redes .social-link:hover *,
+.contacto-redes .social-link:hover i.fab,
+.contacto-redes .social-link:hover i.fas,
+.contacto-redes .social-link:hover i.far {
+    color: white !important;
+}
+
+/* FORZAR ACTUALIZACIÓN */
+.social-icons a {
+    color: #6c757d !important;
+}
+
+/* NOSOTROS HERO */
+.nosotros-hero {
+    background: linear-gradient(135deg, rgba(0,123,255,0.8) 0%, rgba(0,86,179,0.9) 100%), 
+                url('img/nosotros/hero.jpg') center/cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    padding: 4rem 0;
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-left: 1rem;
+}
+
+/* TEAM CARDS */
+.team-card {
+    background: white;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.team-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 5px solid #f8f9fa;
+}
+
+/* VALUE CARDS */
+.value-card {
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+}
+
+.value-card i {
+    transition: all 0.3s ease;
+}
+
+.value-card:hover i {
+    transform: scale(1.2);
+}
+
+/* PROMOCIONES HERO */
+.promociones-hero {
+    background: linear-gradient(135deg, rgba(255,193,7,0.9) 0%, rgba(253,126,20,0.9) 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+    padding: 3rem 0;
+}
+
+/* PROMO CARDS */
+.promo-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.promo-card.flash {
+    border: 3px solid #dc3545;
+}
+
+.promo-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 2;
+}
+
+.promo-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 1.5rem;
+}
+
+.promo-content h5 {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.promo-desc {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.promo-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.promo-features span {
+    font-size: 0.8rem;
+    color: #495057;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.promo-features i {
+    color: #007bff;
+}
+
+.price-container {
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.new-price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #dc3545;
+}
+
+.promo-meta {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+/* COUNTDOWN */
+.countdown {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-family: monospace;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.countdown span {
+    padding: 0 2px;
+}
+
+/* FLASH OFFERS */
+.flash-offers {
+    background: #fff8e1;
+}
+
+/* NEWSLETTER */
+.newsletter-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%) !important;
+}
+
+/* FILTERS */
+.filters-section {
+    position: sticky;
+    top: 150px;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: none;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .promociones-hero {
+        margin-top: 120px;
+        min-height: 50vh;
+    }
+    
+    .filter-buttons {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    
+    .promo-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* AGREGA ESTO AL FINAL DE TU CSS */
+.team-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card p:last-of-type {
+    flex-grow: 1;
+}
+
+/* MEJORA SECCIÓN HISTORIA */
+.historia-section .row {
+    align-items: center;
+    min-height: 500px;
+}
+
+.historia-img-placeholder {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* TIMELINE */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-year {
+    position: absolute;
+    left: -2rem;
+    top: 0;
+    background: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-left: 1rem;
+}
