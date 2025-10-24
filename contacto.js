@@ -1,9 +1,15 @@
-// VALIDACIÓN Y ENVÍO DE FORMULARIO
+// VALIDACIÓN Y ENVÍO DE FORMULARIO SIMULADO PARA GITHUB PAGES
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
     
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        // Mostrar loader
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+        submitBtn.disabled = true;
         
         // Validación básica
         const nombre = document.getElementById('nombre').value;
@@ -13,6 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (!nombre || !email || !telefono || !mensaje) {
             alert('Por favor, completá todos los campos obligatorios.');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
             return;
         }
         
@@ -20,11 +28,19 @@ document.addEventListener('DOMContentLoaded', function() {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             alert('Por favor, ingresá un email válido.');
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
             return;
         }
         
-        // Simular envío (aquí iría la conexión con Formspree o similar)
-        alert('¡Mensaje enviado con éxito! Nos contactaremos a la brevedad.');
-        contactForm.reset();
+        // SIMULAR ENVÍO EXITOSO PARA GITHUB PAGES
+        setTimeout(() => {
+            alert('✅ ¡Consulta enviada con éxito! En un entorno real, esto se guardaría en la base de datos y te contactaríamos a la brevedad.');
+            contactForm.reset();
+            
+            // Restaurar botón
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
     });
 });
